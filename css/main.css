@@ -1,0 +1,47 @@
+:root {
+  --orange: #ffbb6a;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "IBM Plex Sans Arabic";
+  background-color: #fff;
+}
+/* Start Header  */
+header {
+  width: 100%;
+  height: 70px;
+  position: relative;
+}
+header div {
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .account-status {
+  color: #6a6a6a;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+}
+header .status {
+  color: #000000;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  position: relative;
+}
+.status .status-color {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--orange);
+  right: -15px;
+  bottom: 6px;
+}
+/* End Header  */
