@@ -219,10 +219,11 @@ header .status {
   width: 25px;
   height: 25px;
   border: 1px solid #fff;
-  border-top-left-radius: 20px;
+  border-radius: 100% 0% 0% 100% / 50% 100% 0% 50%;
+  /* border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px; */
   position: relative;
 }
 /* End Video */
