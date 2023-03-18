@@ -315,8 +315,15 @@ header .status {
   letter-spacing: 5px;
 }
 .plan-text .text {
+  flex: 1;
+  height: 100%;
   color: #fff;
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  transition: 1s;
 }
 .sketch {
   width: 15%;
