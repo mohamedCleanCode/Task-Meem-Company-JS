@@ -291,6 +291,63 @@ header .status {
 }
 /* End Our Plan */
 
+/* Start Plan Text */
+.plan-text .container {
+  background-color: #0c74af;
+  height: 100px;
+  margin-top: 30px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plan-text .counter {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  background-color: #1ab1c7;
+  color: #fff;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  letter-spacing: 5px;
+}
+.plan-text .text {
+  color: #fff;
+  font-size: 20px;
+}
+.sketch {
+  width: 15%;
+  height: 100%;
+}
+.sketch .sketch-box {
+  width: 100%;
+  height: 50%;
+}
+.sketch .sketch-box span {
+  display: inline-block;
+  width: 60px;
+  height: 50px;
+  background-color: red;
+}
+.sketch .sketch-box:first-child span:last-child,
+.sketch .sketch-box:last-child span:first-child {
+  border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
+  background-color: #15355b;
+}
+.sketch .sketch-box:first-child span:first-child,
+.sketch .sketch-box:last-child span:last-child {
+  border-radius: 100% 0% 100% 0% / 100% 0% 100% 0%;
+  background-color: #1ab1c7;
+}
+.sketch .sketch-box:first-child span:last-child,
+.sketch .sketch-box:last-child span:last-child {
+  transform: translate(5px, 0);
+}
+/* End Plan Text */
+
 /* Start Our Services  */
 .our-services {
   margin: 30px 0;
