@@ -1,5 +1,6 @@
 :root {
   --orange: #ffbb6a;
+  --blue: #14b1c7;
 }
 * {
   box-sizing: border-box;
@@ -224,13 +225,71 @@ header .status {
   height: 25px;
   border: 1px solid #fff;
   border-radius: 100% 0% 0% 100% / 50% 100% 0% 50%;
-  /* border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px; */
   position: relative;
 }
 /* End Video */
+
+/* Start Our Plan */
+.our-plan .plans {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.our-plan .plans li {
+  width: 115px;
+  height: 85px;
+  padding: 15px 25px;
+  border: 1px solid #14b1c7;
+  border-radius: 116px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: 0.5s;
+}
+.our-plan .plans li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 116px;
+  transition: 2s;
+  z-index: -1;
+}
+.our-plan .plans .plan {
+  color: #fff;
+}
+.our-plan .plans .plan::after {
+  width: 100%;
+  height: 100%;
+  right: 0;
+  background-color: var(--blue);
+}
+.our-plan .plans span:not(:last-child) {
+  width: 40px;
+  height: 2px;
+  background-color: #eee;
+  position: relative;
+}
+.our-plan .plans span:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--blue);
+  transition: 1s;
+}
+.our-plan .plans span.done::before {
+  width: 100%;
+}
+/* End Our Plan */
 
 /* Start Our Services  */
 .our-services {
@@ -443,6 +502,20 @@ footer .container:last-child a {
   100% {
     opacity: 1;
     opacity: 0;
+  }
+}
+@keyframes empty-color {
+  100% {
+    background-color: #fff;
+    width: 0;
+    height: 0;
+  }
+}
+@keyframes fill-color {
+  100% {
+    background-color: #14b1c7;
+    width: 100%;
+    height: 100%;
   }
 }
 /* End Animation */
