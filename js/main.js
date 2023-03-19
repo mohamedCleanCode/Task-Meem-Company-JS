@@ -14,6 +14,25 @@ const plans = document.querySelectorAll(".plans li"),
   counter = document.querySelector(".plan-text .odometer");
 let times = 0;
 
+const handleClick = (e) => {
+  plans.forEach((plan) => {
+    plan.classList.remove("plan");
+  });
+  e.target.classList.add("plan");
+  const index = Array.from(plans).findIndex((plan) => plan === e.target);
+  console.log(index);
+  times = index + 1;
+  setTimeout(() => {
+    text.style.opacity = "1";
+    text.innerHTML = desc[times - 1];
+  }, 1000);
+  counter.innerHTML = times;
+};
+
+plans.forEach((plan) => {
+  plan.addEventListener("click", handleClick);
+});
+
 setInterval(() => {
   if (times === 8) {
     times = 0;
@@ -30,8 +49,7 @@ setInterval(() => {
   setTimeout(() => {
     text.style.opacity = "1";
     text.innerHTML = desc[times - 1];
-  });
-  console.log();
+  }, 1000);
   counter.innerHTML = (times + 1).toString().padStart(2, 0);
   times++;
 }, 5000);
